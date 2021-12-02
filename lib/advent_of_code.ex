@@ -4,16 +4,25 @@ defmodule AdventOfCode do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> AdventOfCode.hello()
-      :world
+  Functions for handling advent of code challenges
 
   """
-  def hello do
-    :world
+  import HTTPoison
+
+  def get_input_file(url, headers) do
+    headers = [
+      headers
+    ]
+
+    {:ok, %HTTPoison.Response{body: body}} = HTTPoison.get(url, headers)
+
+    body
+  end
+
+  def list_from_input_data(request_body) do
+    request_body
+    |> String.trim()
+    |> String.split("\n")
   end
 
   def get_final_position(enum) do
