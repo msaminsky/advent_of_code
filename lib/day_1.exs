@@ -5,8 +5,7 @@ import HTTPoison
 import AdventOfCode
 
 headers = [
-  {"cookie",
-   "_ga=GA1.2.1403425949.1638325856; _gid=GA1.2.564441161.1638325856; session=53616c7465645f5fbbe23b465ef93586b8ebcccf5fd7c8ce6ec8dcb79099c5bbcd12d81a01b9f9c34fc9751071bd53d6"}
+  {"cookie", "add_cookies_here"}
 ]
 
 {:ok, %HTTPoison.Response{body: body}} =
